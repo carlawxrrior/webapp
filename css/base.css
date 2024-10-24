@@ -44,6 +44,7 @@ header {
 
 div{
     background-color: inherit;
+    font-size: 1.5rem;
 }
 
 header div,
@@ -103,9 +104,7 @@ cite {
 }
 
 p {
-    color: var(--muted-foreground);
-    margin: 15px 0;
-    line-height: 1.5;
+    color: var(--foreground);
 }
 
 .highlight {
