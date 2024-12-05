@@ -36,3 +36,48 @@ body {
 h1, h2 {
     font-family: 'Ambit Bold',
 }
+
+
+/* Ocultar el menú por defecto */
+.menu {
+    display: none; /* Ocultar */
+    flex-direction: column; /* Alinear los elementos verticalmente */
+    background-color: var(--amarillo); /* Fondo del menú desplegado */
+    position: absolute; /* Para que flote */
+    top: 60px; /* Debajo del header */
+    right: 0;
+    width: 200px; /* Ancho del menú */
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--morado);
+    font-weight: bold;
+}
+
+/* Icono de hamburguesa */
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--morado);
+}
+
+/* Menú visible (añadido con JS) */
+.menu.active {
+    display: flex; /* Mostrar el menú */
+}
