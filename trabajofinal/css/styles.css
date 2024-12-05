@@ -60,76 +60,57 @@ header {
     --morado: #8E44AD; /* Color para el texto */
 }
 
-/* Estilo del body */
+/* Estilos básicos */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
-    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* Estilo del header */
 header {
-    background-color: var(--morado);
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #8E44AD;
+    padding: 10px 20px;
+    position: relative;
 }
 
-/* Icono de hamburguesa */
 .hamburger {
+    font-size: 30px;
     background: none;
     border: none;
-    font-size: 2rem;
     color: white;
     cursor: pointer;
 }
 
-/* Estilo del menú */
 .menu {
-    display: none; /* El menú está oculto por defecto */
+    display: none; /* Inicialmente oculto */
     position: absolute;
-    top: 60px; /* Debajo del header */
-    left: 0;
-    width: 150px; 
-    background-color: var(--amarillo);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 100; /* Lo pone sobre otros elementos */
-    border-radius: 10px;
+    top: 50px; /* Ajusta según sea necesario */
+    right: 0;
+    background-color: #8E44AD;
+    width: 100%;
+    text-align: center;
 }
 
-/* Estilo de los enlaces del menú */
 .menu ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
-.menu li {
-    padding: 1rem;
-    border-bottom: 1px solid #ddd;
+.menu ul li {
+    padding: 10px;
 }
 
-.menu a {
+.menu ul li a {
     text-decoration: none;
-    color: #333;
+    color: white;
+    font-size: 1.2rem;
 }
 
-/* Menú visible cuando se hace clic */
+/* Mostrar el menú cuando tenga la clase 'active' */
 .menu.active {
-    display: block; /* Muestra el menú */
-}
-
-/* Estilos básicos y menú hamburguesa */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-}
-
-/* Otros estilos de las secciones, fondo, etc. */
-section {
-    padding: 2rem;
-    margin-top: 60px; /* Para no solapar el header */
+    display: block;
 }
 
 /* Botón para subir */
@@ -146,9 +127,6 @@ section {
     cursor: pointer;
     display: none;
 }
-
-/* Estilo del menú y demás */
-
 
 /* Hover (cuando el usuario pasa el ratón por encima) */
 .scroll-to-top:hover {
