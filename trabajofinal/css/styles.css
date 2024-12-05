@@ -60,18 +60,26 @@ header {
     --morado: #8E44AD; /* Color para el texto */
 }
 
-/* Estilos básicos */
+/* Estilos generales */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Ambit Regular', sans-serif;
+    background-color: var(--fondo-principal);
+    color: var(--texto-principal);
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    padding-bottom: 60px; /* Asegura que el contenido no se superponga con el footer */
+    
 }
 
 header {
     background-color: #8E44AD;
     padding: 10px 20px;
     position: relative;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .hamburger {
@@ -82,14 +90,26 @@ header {
     cursor: pointer;
 }
 
+.logo {
+    flex-grow: 1; /* Permite que el logo ocupe el espacio disponible */
+    text-align: center; /* Centra el logo */
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 2rem; /* Tamaño base para el logo */
+    color: white;
+}
+
 .menu {
-    display: none; /* Inicialmente oculto */
+    display: none; /* El menú está oculto por defecto */
     position: absolute;
-    top: 50px; /* Ajusta según sea necesario */
+    top: 50px;
     right: 0;
     background-color: #8E44AD;
     width: 100%;
     text-align: center;
+    z-index: 1; /* Asegura que el menú esté por encima de otros elementos */
 }
 
 .menu ul {
@@ -108,31 +128,21 @@ header {
     font-size: 1.2rem;
 }
 
-/* Mostrar el menú cuando tenga la clase 'active' */
+/* Cuando la clase "active" es añadida al menú, lo mostramos */
 .menu.active {
     display: block;
 }
 
-/* Botón para subir */
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #8E44AD;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-}
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.5rem; /* Ajusta el tamaño del logo en pantallas pequeñas */
+    }
 
-/* Hover (cuando el usuario pasa el ratón por encima) */
-.scroll-to-top:hover {
-    background-color: #F4C430; /* Color de fondo amarillo cuando se pasa el ratón */
+    .hamburger {
+        font-size: 25px; /* Ajusta el tamaño de la hamburguesa */
+    }
 }
-
 
 
 /* Variables de colores */
@@ -154,24 +164,6 @@ header {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Estilo del body */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--fondo-principal);
-    color: var(--texto-principal);
-    line-height: 1.6;
-}
-
-/* Header */
-header {
-    background-color: var(--header-fondo);
-    color: var(--header-texto);
-    padding: 1rem;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
 }
 
 /* Encabezados */
@@ -231,12 +223,24 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
+/* Estilos para el footer */
 footer {
-    background-color: var(--header-fondo);
-    color: var(--header-texto);
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-    font-size: 0.9rem;
+    background-color: #8E44AD; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    padding: 20px 0; /* Espaciado arriba y abajo */
+    position: fixed; /* Fijar el footer en la parte inferior */
+    bottom: 0; /* Asegura que esté en la parte inferior */
+    left: 0; /* Asegura que esté alineado a la izquierda */
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    font-size: 1rem; /* Tamaño de fuente */
+    z-index: 10; /* Para asegurarse de que esté por encima de otros elementos */
 }
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    footer {
+        font-size: 0.9rem; /* Ajustar tamaño de fuente en pantallas pequeñas */
+    }
+}
+
