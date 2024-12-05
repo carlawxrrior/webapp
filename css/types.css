@@ -8,3 +8,33 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Ambit Black';
+    src: url('../assets/fonts/Ambit-Black.woff2') format(woff2);
+}
+
+@font-face {
+    font-family: 'Ambit Bold';
+    src: url('../assets/fonts/Ambit-Bold.woff2') format(woff2);
+}
+
+@font-face {
+    font-family: 'Ambit Regular';
+    src: url('../assets/fonts/Ambit-Regular.woff2') format(woff2);
+}
+
+@font-face {
+    font-family: 'Ambit Semibold';
+    src: url('../assets/fonts/Ambit-SemiBold.woff2') format(woff2);
+}
+
+@font-face {
+    font-family: 'Ambit Light';
+    src: url('../assets/fonts/ambit-light.woff') format(woff2);
+}
+
+@font-face {
+    font-family: 'Ambit Thin';
+    src: url('../assets/fonts/ambit-thin.woff') format(woff2);
+}
