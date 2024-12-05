@@ -38,34 +38,42 @@ h1, h2 {
 }
 
 
-/* Ocultar el menú por defecto */
-.menu {
-    display: none; /* Ocultar */
-    flex-direction: column; /* Alinear los elementos verticalmente */
-    background-color: var(--amarillo); /* Fondo del menú desplegado */
-    position: absolute; /* Para que flote */
-    top: 60px; /* Debajo del header */
-    right: 0;
-    width: 200px; /* Ancho del menú */
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+/* Estilo del header */
+header {
+    display: flex;
+    justify-content: space-between; /* Espaciar elementos: hamburguesa a la izquierda, menú a la derecha */
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--amarillo);
 }
 
-.menu ul {
-    list-style: none;
-    padding: 0;
+/* Reset básico */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.menu li {
-    text-align: center;
-    margin: 1rem 0;
+/* Variables de colores */
+:root {
+    --amarillo: #F4C430; /* Fondo del menú */
+    --morado: #8E44AD; /* Color para el texto */
 }
 
-.menu a {
-    text-decoration: none;
-    color: var(--morado);
-    font-weight: bold;
+/* Estilo del body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo del header */
+header {
+    background-color: var(--morado);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Icono de hamburguesa */
@@ -73,11 +81,184 @@ h1, h2 {
     background: none;
     border: none;
     font-size: 2rem;
+    color: white;
     cursor: pointer;
-    color: var(--morado);
 }
 
-/* Menú visible (añadido con JS) */
+/* Estilo del menú */
+.menu {
+    display: none; /* El menú está oculto por defecto */
+    position: absolute;
+    top: 60px; /* Debajo del header */
+    left: 0;
+    width: 150px; 
+    background-color: var(--amarillo);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Lo pone sobre otros elementos */
+    border-radius: 10px;
+}
+
+/* Estilo de los enlaces del menú */
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Menú visible cuando se hace clic */
 .menu.active {
-    display: flex; /* Mostrar el menú */
+    display: block; /* Muestra el menú */
+}
+
+/* Estilos básicos y menú hamburguesa */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Otros estilos de las secciones, fondo, etc. */
+section {
+    padding: 2rem;
+    margin-top: 60px; /* Para no solapar el header */
+}
+
+/* Botón para subir */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #8E44AD;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilo del menú y demás */
+
+
+/* Hover (cuando el usuario pasa el ratón por encima) */
+.scroll-to-top:hover {
+    background-color: #F4C430; /* Color de fondo amarillo cuando se pasa el ratón */
+}
+
+
+
+/* Variables de colores */
+:root {
+    --fondo-principal: #FDF6E3;   /* Fondo general */
+    --header-fondo: #8E44AD;      /* Fondo del header */
+    --header-texto: #FFFFFF;      /* Texto del header */
+    --texto-principal: #2C3E50;  /* Color del texto */
+    --encabezado1: #F4C430;       /* H1 (Amarillo cálido) */
+    --encabezado2: #D35400;       /* H2 (Naranja intenso) */
+    --encabezado3: #2980B9;       /* H3 (Azul) */
+    --boton: #8E44AD;             /* Color de botones */
+    --boton-texto: #FFFFFF;       /* Texto de botones */
+    --fondo-hover: #DCC6E0;       /* Hover sobre botones */
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--fondo-principal);
+    color: var(--texto-principal);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--header-fondo);
+    color: var(--header-texto);
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Encabezados */
+h1 {
+    color: var(--encabezado1);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h2 {
+    color: var(--encabezado2);
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+h3 {
+    color: var(--encabezado3);
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+}
+
+/* Botones */
+button {
+    background-color: var(--boton);
+    color: var(--boton-texto);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--fondo-hover);
+}
+
+/* Enlaces */
+a {
+    color: var(--encabezado1);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Secciones */
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 900px;
+    text-align: justify;
+    background-color: #FFFFFF; /* Blanco para resaltar el contenido */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: var(--header-fondo);
+    color: var(--header-texto);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
 }
