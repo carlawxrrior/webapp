@@ -1,246 +1,277 @@
-
 @font-face {
-    font-family: 'Ambit Black';
-    src: url('./fonts/Ambit-Black.woff2') format(woff2);
+  font-family: "Ambit Black";
+  src: url("./fonts/Ambit-Black.woff2") format(woff2);
+  font-weight: normal; /* Opcional: peso de la fuente */
+  font-style: normal; /* Opcional: estilo de la fuente */
 }
 
 @font-face {
-    font-family: 'Ambit Bold';
-    src: url('./fonts/Ambit-Bold.woff2') format(woff2);
+  font-family: "Ambit Bold";
+  src: url("./fonts/Ambit-Bold.woff2") format(woff2);
+  font-weight: bold; /* Opcional: peso de la fuente */
+  font-style: bold; /* Opcional: estilo de la fuente */
 }
 
 @font-face {
-    font-family: 'Ambit Semibold';
-    src: url('./fonts/Ambit-SemiBold.woff2') format(woff2);
+  font-family: "Ambit Semibold";
+  src: url("./fonts/Ambit-SemiBold.woff2") format(woff2);
 }
 
 @font-face {
-    font-family: 'Ambit Regular';
-    src: url('./fonts/Ambit-Regular.woff2') format(woff2);
+  font-family: "Ambit Regular";
+  src: url("./fonts/Ambit-Regular.woff2") format(woff2);
+  font-weight: normal; /* Opcional: peso de la fuente */
+  font-style: normal; /* Opcional: estilo de la fuente */
 }
 
 @font-face {
-    font-family: 'Ambit Light';
-    src: url('./fonts/ambit-light.woff') format(woff2);
+  font-family: "Ambit Light";
+  src: url("./fonts/ambit-light.woff") format(woff2);
 }
 
 @font-face {
-    font-family: 'Ambit Thin';
-    src: url('./fonts/ambit-thin.woff') format(woff2);
+  font-family: "Ambit Thin";
+  src: url("./fonts/ambit-thin.woff") format(woff2);
+  font-weight: thin; /* Opcional: peso de la fuente */
+  font-style: thin; /* Opcional: estilo de la fuente */
 }
 
 body {
-    font-family: 'Ambit Regular',
+  font-family: "Ambit Regular", sans-serif;
 }
 
-h1, h2 {
-    font-family: 'Ambit Bold',
+h1,
+h2 {
+  font-family: "Ambit Bold", sans-serif;
 }
-
 
 /* Estilo del header */
 header {
-    display: flex;
-    justify-content: space-between; /* Espaciar elementos: hamburguesa a la izquierda, menú a la derecha */
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--amarillo);
+  display: flex;
+  justify-content: space-between; /* Espaciar elementos: hamburguesa a la izquierda, menú a la derecha */
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--amarillo);
 }
 
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Variables de colores */
 :root {
-    --amarillo: #F4C430; /* Fondo del menú */
-    --morado: #8E44AD; /* Color para el texto */
+  --amarillo: #f4c430; /* Fondo del menú */
+  --morado: #8e44ad; /* Color para el texto */
 }
 
 /* Estilos generales */
 body {
-    font-family: 'Ambit Regular', sans-serif;
-    background-color: var(--fondo-principal);
-    color: var(--texto-principal);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 60px; /* Asegura que el contenido no se superponga con el footer */
-    
+  font-family: "Ambit Regular", sans-serif;
+  background-color: var(--fondo-principal);
+  color: var(--texto-principal);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 60px; /* Asegura que el contenido no se superponga con el footer */
 }
 
 header {
-    background-color: #8E44AD;
-    padding: 10px 20px;
-    position: relative;
-    padding: 1rem;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
+  background-color: #8e44ad;
+  padding: 10px 20px;
+  position: relative;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .hamburger {
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 .logo {
-    flex-grow: 1; /* Permite que el logo ocupe el espacio disponible */
-    text-align: center; /* Centra el logo */
+  flex-grow: 1; /* Permite que el logo ocupe el espacio disponible */
+  text-align: center; /* Centra el logo */
 }
 
 .logo h1 {
-    margin: 0;
-    font-size: 2rem; /* Tamaño base para el logo */
-    color: white;
+  margin: 0;
+  font-size: 2rem; /* Tamaño base para el logo */
+  color: white;
 }
 
 .menu {
-    display: none; /* El menú está oculto por defecto */
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background-color: #8E44AD;
-    width: 100%;
-    text-align: center;
-    z-index: 1; /* Asegura que el menú esté por encima de otros elementos */
+  display: none; /* El menú está oculto por defecto */
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #8e44ad;
+  width: 100%;
+  text-align: center;
+  z-index: 1; /* Asegura que el menú esté por encima de otros elementos */
 }
 
 .menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .menu ul li {
-    padding: 10px;
+  padding: 10px;
 }
 
 .menu ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
 }
 
 /* Cuando la clase "active" es añadida al menú, lo mostramos */
 .menu.active {
-    display: block;
+  display: block;
 }
 
 /* Responsividad */
 @media screen and (max-width: 768px) {
-    .logo h1 {
-        font-size: 1.5rem; /* Ajusta el tamaño del logo en pantallas pequeñas */
-    }
+  .logo h1 {
+    font-size: 1.5rem; /* Ajusta el tamaño del logo en pantallas pequeñas */
+  }
 
-    .hamburger {
-        font-size: 25px; /* Ajusta el tamaño de la hamburguesa */
-    }
+  .hamburger {
+    font-size: 25px; /* Ajusta el tamaño de la hamburguesa */
+  }
 }
-
 
 /* Variables de colores */
 :root {
-    --fondo-principal: #FDF6E3;   /* Fondo general */
-    --header-fondo: #8E44AD;      /* Fondo del header */
-    --header-texto: #FFFFFF;      /* Texto del header */
-    --texto-principal: #2C3E50;  /* Color del texto */
-    --encabezado1: #F4C430;       /* H1 (Amarillo cálido) */
-    --encabezado2: #D35400;       /* H2 (Naranja intenso) */
-    --encabezado3: #2980B9;       /* H3 (Azul) */
-    --boton: #8E44AD;             /* Color de botones */
-    --boton-texto: #FFFFFF;       /* Texto de botones */
-    --fondo-hover: #DCC6E0;       /* Hover sobre botones */
+  --fondo-principal: #fdf6e3; /* Fondo general */
+  --header-fondo: #8e44ad; /* Fondo del header */
+  --header-texto: #ffffff; /* Texto del header */
+  --texto-principal: #2c3e50; /* Color del texto */
+  --encabezado1: #f4c430; /* H1 (Amarillo cálido) */
+  --encabezado2: #d35400; /* H2 (Naranja intenso) */
+  --encabezado3: #2980b9; /* H3 (Azul) */
+  --boton: #8e44ad; /* Color de botones */
+  --boton-texto: #ffffff; /* Texto de botones */
+  --fondo-hover: #dcc6e0; /* Hover sobre botones */
 }
 
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Encabezados */
 h1 {
-    color: var(--encabezado1);
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
+  color: var(--encabezado1);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 h2 {
-    color: var(--encabezado2);
-    font-size: 2rem;
-    margin-bottom: 0.8rem;
+  color: var(--encabezado2);
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 h3 {
-    color: var(--encabezado3);
-    font-size: 1.5rem;
-    margin-bottom: 0.6rem;
+  color: var(--encabezado3);
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
 }
 
 /* Botones */
 button {
-    background-color: var(--boton);
-    color: var(--boton-texto);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+  background-color: var(--boton);
+  color: var(--boton-texto);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: var(--fondo-hover);
+  background-color: var(--fondo-hover);
+}
+
+.back-to-top {
+  position: fixed; /* Fija la flecha en la pantalla */
+  bottom: 120px; /* Separación desde el borde inferior */
+  right: 20px; /* Separación desde el borde derecho */
+  background-color: #8e44ad; /* Fondo del botón */
+  color: #f5dfff; /* Color de la flecha */
+  border: none;
+  border-radius: 50%; /* Forma redondeada */
+  width: 50px; /* Ancho del botón */
+  height: 50px; /* Altura del botón */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  z-index: 10; /* Asegura que esté por encima de otros elementos */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  font-size: 24px; /* Tamaño de la flecha */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un efecto moderno */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Efectos de hover */
+}
+
+/* Hover para la flecha */
+.back-to-top:hover {
+  background-color: #481b5c; /* Cambia el color al pasar el cursor */
+  transform: scale(1.1); /* Hace que el botón crezca un poco */
 }
 
 /* Enlaces */
 a {
-    color: var(--encabezado1);
-    text-decoration: none;
+  color: var(--encabezado1);
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Secciones */
 section {
-    padding: 2rem;
-    margin: 1rem auto;
-    max-width: 900px;
-    text-align: justify;
-    background-color: #FFFFFF; /* Blanco para resaltar el contenido */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 900px;
+  text-align: justify;
+  background-color: #ffffff; /* Blanco para resaltar el contenido */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para el footer */
 footer {
-    background-color: #8E44AD; /* Color de fondo */
-    color: white; /* Color del texto */
-    text-align: center; /* Centrar el texto */
-    padding: 20px 0; /* Espaciado arriba y abajo */
-    position: fixed; /* Fijar el footer en la parte inferior */
-    bottom: 0; /* Asegura que esté en la parte inferior */
-    left: 0; /* Asegura que esté alineado a la izquierda */
-    width: 100%; /* Asegura que el footer ocupe todo el ancho */
-    font-size: 1rem; /* Tamaño de fuente */
-    z-index: 10; /* Para asegurarse de que esté por encima de otros elementos */
+  background-color: #8e44ad; /* Color de fondo */
+  color: white; /* Color del texto */
+  text-align: center; /* Centrar el texto */
+  padding: 20px 0; /* Espaciado arriba y abajo */
+  position: fixed; /* Fijar el footer en la parte inferior */
+  bottom: 0; /* Asegura que esté en la parte inferior */
+  left: 0; /* Asegura que esté alineado a la izquierda */
+  width: 100%; /* Asegura que el footer ocupe todo el ancho */
+  font-size: 1rem; /* Tamaño de fuente */
+  z-index: 10; /* Para asegurarse de que esté por encima de otros elementos */
 }
 
 /* Estilos responsivos */
 @media screen and (max-width: 768px) {
-    footer {
-        font-size: 0.9rem; /* Ajustar tamaño de fuente en pantallas pequeñas */
-    }
+  footer {
+    font-size: 0.9rem; /* Ajustar tamaño de fuente en pantallas pequeñas */
+  }
 }
-
